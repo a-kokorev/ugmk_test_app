@@ -12,7 +12,7 @@ export const pieCartOptions = {
         return chart.dataset.backgroundColor[chart.dataIndex];
       },
       font: {
-        size: 20,
+        size: 16,
       },
     },
   },

@@ -10,7 +10,12 @@ export const ProductSelectOptionsDisplayText = {
   [ProductSelectOptions.product2]: "Продукт 2",
 };
 
-export const months = [
+export const FactoryNameById = {
+  1: "A",
+  2: "Б",
+};
+
+export const MonthsArray = [
   { name: "Январь", number: 1 },
   { name: "Февраль", number: 2 },
   { name: "Март", number: 3 },

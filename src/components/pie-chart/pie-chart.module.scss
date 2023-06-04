@@ -2,8 +2,11 @@
   display: flex;
   justify-content: center;
   padding: 15px;
+  max-height: 500px;
 
   .pieChart {
     width: 50%;
+    display: flex;
+    justify-content: center;
   }
 }

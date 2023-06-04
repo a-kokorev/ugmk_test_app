@@ -38,11 +38,12 @@ function HomePage() {
         <div className={styles.filterWrapper}>
           <div>Фильтр по типу продукции</div>
           <select
-            onChange={(e) => onProductSelect(e.target.value)}
+            key="product-select"
             value={selectedOption}
+            onChange={(e) => onProductSelect(e.target.value)}
           >
             {Object.keys(ProductSelectOptions).map((key) => (
-              <option value={ProductSelectOptions[key]}>
+              <option key={key} value={ProductSelectOptions[key]}>
                 {ProductSelectOptionsDisplayText[ProductSelectOptions[key]]}
               </option>
             ))}
