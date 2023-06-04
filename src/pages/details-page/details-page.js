@@ -18,8 +18,7 @@ function DetailsPage() {
     const companyData = data[companyId];
 
     if (companyData) {
-      const months = Object.values(companyData);
-      setChartData(months[monthNumber]);
+      setChartData(companyData[monthNumber]);
     }
   };
 

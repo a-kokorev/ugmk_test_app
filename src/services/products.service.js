@@ -1,14 +1,23 @@
 export const getProducts = async () => {
-  const response = await fetch("http://localhost:3001/products");
+  try {
+    const response = await fetch("http://localhost:3001/products");
+    const responseJson = await response.json();
 
-  return mapProductsData(await response.json());
+    if (responseJson) {
+      return mapProductsData(responseJson);
+    }
+
+    return {};
+  } catch (error) {
+    console.error(error);
+  }
 };
 
 const mapProductsData = (data) => {
   const result = {};
 
   for (const item of data) {
-    if (!!item.date) {
+    if (!!item?.date) {
       const [, month] = item.date.split("/");
 
       if (!result[item.factory_id]) {
