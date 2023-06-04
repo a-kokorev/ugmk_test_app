@@ -1,9 +1,11 @@
 import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ReactDOM from "react-dom/client";
+
 import "./index.css";
 import reportWebVitals from './reportWebVitals';
 import HomePage from "./pages/home-page/home-page";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import DetailsPage from "./pages/details-page/details-page";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -11,6 +13,7 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/details/:companyId/:monthNumber" element={<DetailsPage />}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

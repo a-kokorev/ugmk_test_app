@@ -4,9 +4,6 @@ export const pieCartOptions = {
     legend: {
       position: "bottom",
     },
-    title: {
-      display: false,
-    },
     datalabels: {
       anchor: "end",
       align: "end",
@@ -26,9 +23,6 @@ export const barChartOptions = {
   plugins: {
     legend: {
       position: "bottom",
-    },
-    title: {
-      display: false,
     },
     datalabels: false,
   },

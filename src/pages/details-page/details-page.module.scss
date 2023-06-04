@@ -1,0 +1,17 @@
+.detailsWrapper {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+
+  .detailsContent {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 80vw;
+
+    .detailsHeader {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

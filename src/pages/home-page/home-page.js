@@ -34,7 +34,7 @@ function HomePage() {
 
   return (
     <div className={styles.homeWrapper}>
-      <div className={styles.content}>
+      <div className={styles.homeContent}>
         <div className={styles.filterWrapper}>
           <div>Фильтр по типу продукции</div>
           <select
@@ -42,7 +42,9 @@ function HomePage() {
             value={selectedOption}
           >
             {Object.keys(ProductSelectOptions).map((key) => (
-              <option value={ProductSelectOptions[key]}>{ProductSelectOptionsDisplayText[ProductSelectOptions[key]]}</option>
+              <option value={ProductSelectOptions[key]}>
+                {ProductSelectOptionsDisplayText[ProductSelectOptions[key]]}
+              </option>
             ))}
           </select>
         </div>
