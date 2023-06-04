@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ReactDOM from "react-dom/client";
-
-import "./index.css";
 import reportWebVitals from './reportWebVitals';
 import HomePage from "./pages/home-page/home-page";
 import DetailsPage from "./pages/details-page/details-page";
+import NotFound from "./pages/not-found/not-found";
+import "./index.scss";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -14,6 +14,7 @@ root.render(
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/details/:companyId/:monthNumber" element={<DetailsPage />}/>
+        <Route path='*' element={<NotFound />}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

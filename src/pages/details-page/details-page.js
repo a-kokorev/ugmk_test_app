@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 import { months } from "../../constants/product.constants";
 import { PieChart } from "../../components/pie-chart/pie-chart.component";
@@ -11,6 +11,7 @@ import styles from "./details-page.module.scss";
 function DetailsPage() {
   const { companyId, monthNumber } = useParams();
   const [chartData, setChartData] = useState();
+  const navigate = useNavigate();
 
   const getProductsData = async () => {
     const data = await getProducts();
@@ -23,6 +24,10 @@ function DetailsPage() {
   };
 
   useEffect(() => {
+    if (monthNumber > 12 || companyId > 2) {
+      return navigate(`/notFound`);
+    }
+
     getProductsData();
   }, [companyId, monthNumber]);
 
