@@ -1,0 +1,23 @@
+.homeWrapper {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 80vw;
+
+    .filterWrapper {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      gap: 15px;
+      padding: 10px 20px;
+      border: 2px solid #696969;
+      border-radius: 10px;
+      font-size: 18px;
+    }
+  }
+}
